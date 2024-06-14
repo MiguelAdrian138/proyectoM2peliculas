@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" aria-current="page" href="index.html">Home</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="https://es.wikipedia.org/wiki/Historia_del_cine"
+                  target="_blank"
+                  >Historia de el cine</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="https://cinepolis.com.pe/cartelera/lima-peru"
+                  target="_blank"
+                  >Cartelera</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="formulario.html">Formulario</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <form id="formulario-pelicula" action="/movies" method="POST">
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="year">Año:</label>
+      <input type="number" id="year" name="year" required />
+
+      <label for="genre">Género:</label>
+      <input type="text" id="genre" name="genre" required />
+
+      <label for="duration">Duración:</label>
+      <input type="number" id="duration" name="duration" required />
+
+      <label for="director">Director:</label>
+      <input type="text" id="director" name="director" required />
+
+      <label for="rate">Calificación:</label>
+      <input type="number" id="rate" name="rate" required />
+
+      <label for="poster">Imagen:</label>
+      <input type="url" id="poster" name="poster" required />
+
+      <button onclick="clearForm()">Limpiar</button>
+      <button type="submit">Enviar</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/formulario.js"></script>
+    <script type="module" src="./scripts/formulario.js"></script>
+  </body>
+</html>
